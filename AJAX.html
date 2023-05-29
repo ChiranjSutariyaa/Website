@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .print{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);  
+            gap: 20px; 
+        }
+        .print div{
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+<body>
+
+    <div class="print"></div>
+
+    <script>
+        let display = (data) => {
+            data.map((ele) => {
+
+                let div=document.createElement("div")
+
+                let title = document.createElement("h1")
+                title.innerHTML = ele.title
+                let img = document.createElement("img")
+                img.src = ele.thumbnail
+                let price = document.createElement("h2")
+                price.innerHTML = ele.price
+                let images = document.createElement("img")
+                images.src = ele.images[1]
+                let description = document.createElement("h6")
+                description.innerHTML = ele.description
+                let discountPercentage = document.createElement("h3")
+                discountPercentage.innerHTML = ele.discountPercentage
+                let rating = document.createElement("h3")
+                rating.innerHTML = ele.rating
+
+                div.append(title,img,price,images,description,discountPercentage,rating)
+                document.querySelector(".print").append(div)
+            })
+
+        }
+
+        fetch("https://dummyjson.com/products")
+            .then((out) => out.json())
+            .then((put) => display(put.products))
+
+
+    </script>
+</body>
+
+</html>

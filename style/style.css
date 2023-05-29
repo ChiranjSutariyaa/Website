@@ -1,0 +1,41 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+}
+#header-ul {
+    display: flex;
+    justify-content: space-around;
+    margin: -3px;
+    background-color: #8ac1f8be;
+    width: 97.2%;
+
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    background-position: fixed;
+
+
+}
+
+#header-li {
+    list-style-type: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#header-a {
+    text-decoration: none;
+    color: rgb(0 7 45);
+
+}
+
+#header-a:hover {
+    border-bottom: 1px solid rgb(25 35 86);
+
+}
+
+
+
+/* slider */

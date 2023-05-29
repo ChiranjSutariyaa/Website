@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/login.css">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul id="header-ul">
+            <li id="header-li"><a href="index.html" id="header-a">Home</a></li>
+            <li id="header-li"><a href="" id="header-a">Cart</a></li>
+            <li id="header-li"><a href="" id="header-a">Product</a></li>
+            <li id="header-li"><a href="Login.html" id="header-a">Login</a></li>
+            <li id="header-li"><a href="signup.html" id="header-a">Sign up</a></li>
+            
+        </ul>
+    </div>
+   <div id="mean">
+        <div class="login"> <form id="form">
+            <h2 id="head-text">Login</h2>
+            <input type="email" id="Email" placeholder="Email">
+            <input type="Password" id="Password" placeholder="Password">
+            <button id="btn"><a href="" id="btn-a">Login</a></button>
+        </form>
+        <div>
+            <img src="img/login.png" id="login-img" alt="">
+        </div></div>
+   </div>
+    <script>
+        let user=JSON.parse(localStorage.getItem,("project"))
+    </script>
+</body>
+</html>
