@@ -11,10 +11,20 @@ document.getElementById("price").innerHTML=`total amount: ${totalprice}`;
 cart.map((ele)=>{
     
     let div=document.createElement("div")
-
     let img = document.createElement("img")
     img.src = ele.thumbnail
-
     div.append(img)
-    document.getElementById("cart").append(div)
+    div.setAttribute("class","mean")
+
+
+    let div1=document.createElement("div1")
+    let title = document.createElement("h2")
+    title.innerHTML = ele.title
+    title.setAttribute("class","title")
+    let price = document.createElement("h3")
+    price.innerHTML = ele.price
+    price.setAttribute("class","price")
+
+    div1.append(title,price)
+    document.getElementById("cart").append(div,div1)
 })
