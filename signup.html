@@ -14,8 +14,8 @@
     <div>
         <ul id="header-ul">
             <li id="header-li"><a href="index.html" id="header-a">Home</a></li>
-            <li id="header-li"><a href="" id="header-a">Cart</a></li>
-            <li id="header-li"><a href="" id="header-a">Product</a></li>
+            <li id="header-li"><a href="cart.html" id="header-a">Cart</a></li>
+            <li id="header-li"><a href="Product.html" id="header-a">Product</a></li>
             <li id="header-li"><a href="Login.html" id="header-a">Login</a></li>
             <li id="header-li"><a href="signup.html" id="header-a">Sign up</a></li>
             
@@ -36,30 +36,8 @@
         </div>
     </div>
     <div id="ans"></div>
-    <script>
-        document.getElementById("form").addEventListener("submit", function (event) {
-            event.preventDefault();
-
-            let fname = document.getElementById("fname").value
-            let lname = document.getElementById("lname").value
-            let Email = document.getElementById("Email").value
-            let Password = document.getElementById("Password").value
-            let ConfirmPassword = document.getElementById("ConfirmPassword").value
-
-            let data = {
-                fname: fname,
-                lname: lname,
-                Email: Email,
-                Password: Password,
-                ConfirmPassword:ConfirmPassword
-            }
-
-            console.log(data);
-            localStorage.setItem("project", JSON.stringify(data))
-
-
-
-        })
+    <script src="js/signup.js">
+       
     </script>
 </body>
 
