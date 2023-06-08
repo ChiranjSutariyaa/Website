@@ -25,6 +25,12 @@
 }
 .quyntity{
     display: flex;
-    justify-content: center;
     align-items: center;
+}
+div#cart {
+    background-color: #a8d1fa;
+}
+.head p{
+    font-size: 25px;
+    margin-bottom: 50px;
 }

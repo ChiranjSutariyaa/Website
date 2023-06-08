@@ -35,5 +35,30 @@ cart.map((ele)=>{
     div.append(img,title,price,qtydiv)
     document.getElementById("cart").append(div)
 
+    add.addEventListener("click", () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+        cart.map((val, index) => {
+          if (val.id == ele.id) {
+            cart[index].qty+= 1
+            // document.querySelector("p").innerHTML = cart[index].qty += 1;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.reload()
+          }
+        });
+      });
+
+    desc.addEventListener("click", () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  
+        cart.map((val, index) => {
+          if (val.id == ele.id) {
+            cart[index].qty-= 1
+            // document.querySelector("p").innerHTML = cart[index].qty -= 1;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            window.location.reload()
+          }
+        });
+      });
 
 })
