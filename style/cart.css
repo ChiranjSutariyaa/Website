@@ -1,5 +1,25 @@
 .mean {
     display: flex;
-    /* justify-content: space-around; */
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+.img{
+    width: 200px;
 }
 
+.head{
+    display: flex;
+    justify-content: space-around; 
+    margin-left: 130px;
+}
+.head p{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+#price{
+    float: right;
+}
+#headcart{
+    text-align: center;
+    font-size: 26px;
+}

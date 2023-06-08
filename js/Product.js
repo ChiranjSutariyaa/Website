@@ -39,7 +39,6 @@ let display = (data) => {
             if(!check) {
                 cart.push({...ele, qty:1});
                 localStorage.setItem("cart",JSON.stringify(cart));
-                alert("add to cart success");
             };  
         })
     })
