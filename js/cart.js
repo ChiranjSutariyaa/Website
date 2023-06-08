@@ -22,6 +22,18 @@ cart.map((ele)=>{
     price.innerHTML = ele.price
     price.setAttribute("class","price")
 
-    div.append(img,title,price)
+    let add= document.createElement("button")
+    add.innerHTML="+"
+    let qty=document.createElement("p")
+    qty.innerHTML=ele.qty
+    let desc= document.createElement("button")
+    desc.innerHTML="-"
+    let qtydiv=document.createElement("div")
+    qtydiv.setAttribute("class","quyntity")
+    qtydiv.append(add,qty,desc)
+
+    div.append(img,title,price,qtydiv)
     document.getElementById("cart").append(div)
+
+
 })
